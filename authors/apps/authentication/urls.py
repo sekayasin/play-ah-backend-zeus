@@ -1,8 +1,10 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from .views import (
     LoginAPIView, RegistrationAPIView, UserRetrieveUpdateAPIView
 )
+
+app_name = 'auth'
 
 urlpatterns = [
     url(r'^user/?$', UserRetrieveUpdateAPIView.as_view()),
